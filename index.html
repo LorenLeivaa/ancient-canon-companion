@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Ancient Canon Study Companion</title>
+<meta name="description" content="Your personal AI Bible study companion for The Ethiopian Bible, Enoch and Jubilees.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-title" content="Study Companion">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="logo.jpg">
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="estilos.css?v=2">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marca">
+    <div class="avatar" id="avatar">
+      <img src="logo.jpg" alt="" id="logo" onerror="this.remove()">
+      <span class="iniciales">AC</span>
+    </div>
+    <div class="marca-texto">
+      <h1>Your Ancient Canon Study Companion</h1>
+      <p>The Ethiopian Bible · 88 Books</p>
+    </div>
+    <span class="etiqueta">AI assistant</span>
+  </div>
+  <div class="acciones">
+    <div class="contador" id="contador" aria-live="polite"></div>
+    <button type="button" class="nuevo" id="nuevo" hidden>New chat</button>
+  </div>
+</header>
+
+<main class="hilo" id="hilo" role="log" aria-live="polite" aria-label="Conversation">
+
+  <section class="bienvenida" id="bienvenida">
+    <div class="avatar avatar-grande" aria-hidden="true">
+      <img src="logo.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">AC</span>
+    </div>
+    <h2>Welcome. What would you like to read today?</h2>
+    <p class="bajada">
+      I know your 88-book edition, the Book of Enoch and the Book of Jubilees.
+      Ask me about any book, passage or person, or tap one of these questions:
+    </p>
+    <div class="sugerencias">
+      <button class="sugerencia" type="button">Who were the Watchers, and where does the Bible mention them?</button>
+      <button class="sugerencia" type="button">I'm new to these books. Where should I start reading?</button>
+      <button class="sugerencia" type="button">Why is Enoch in the Ethiopian Bible but not in mine?</button>
+      <button class="sugerencia" type="button">Give me a 15-minute reading for today, with a question to reflect on.</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="pie">
+  <div class="adjunto" id="adjunto" hidden>
+    <img id="adjunto-img" alt="Photo to send">
+    <button type="button" id="quitar-foto" aria-label="Remove photo">×</button>
+  </div>
+  <form class="compositor" id="compositor">
+    <button type="button" id="foto" class="boton-foto" aria-label="Add photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M4 8h3l2-2.5h6L17 8h3v11H4z" fill="none" stroke="currentColor"
+              stroke-width="1.9" stroke-linejoin="round"/>
+        <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </svg>
+    </button>
+    <input type="file" id="archivo" accept="image/*" hidden>
+    <textarea id="entrada" rows="1" placeholder="Ask your Study Companion…"
+              enterkeyhint="send" autocomplete="off"
+              aria-label="Ask your Study Companion"></textarea>
+    <button type="submit" id="enviar" aria-label="Send">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor"
+              stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </form>
+  <p class="aviso">
+    AI assistant. It can make mistakes: always check the passage in your Bible.
+    Bible study help only, not pastoral, medical, legal or financial advice.
+    Independent edition, not affiliated with any church.
+  </p>
+</div>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>
